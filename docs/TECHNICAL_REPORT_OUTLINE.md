@@ -1,6 +1,6 @@
 # Technical Report: Robust and Interpretable Deep Reinforcement Learning for Dynamic Resource Allocation in Open RAN Under Distribution Shift
 
-## Abstract (150 words)
+## Abstract
 
 Open RAN orchestration requires ML models that are not only performant but also robust, interpretable, and uncertainty-aware. This work presents a comprehensive framework for trustworthy AI-based resource allocation in multi-cell Open RAN systems. We formalize dynamic PRB allocation as a multi-agent RL problem and propose a GNN-based PPO policy that outperforms baselines by 15% under distribution shift. Our contributions include: (1) a realistic RAN simulator with O-RAN E2 interface, (2) ensemble-based uncertainty quantification reducing SLA violations by 40%, (3) SHAP-based interpretability revealing buffer state as the critical feature, and (4) rigorous evaluation under 5 shift scenarios and 4 stress tests. Results demonstrate that trustworthy AI techniques are essential for production RAN deployment, achieving 9% performance drop under shift vs 22% for naive baselines, with calibrated uncertainty (ECE=0.04).
 
