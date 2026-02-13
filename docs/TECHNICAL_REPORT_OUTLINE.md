@@ -4,7 +4,7 @@
 
 Open RAN orchestration requires ML models that are not only performant but also robust, interpretable, and uncertainty-aware. This work presents a comprehensive framework for trustworthy AI-based resource allocation in multi-cell Open RAN systems. We formalize dynamic PRB allocation as a multi-agent RL problem and propose a GNN-based PPO policy that outperforms baselines by 15% under distribution shift. Our contributions include: (1) a realistic RAN simulator with O-RAN E2 interface, (2) ensemble-based uncertainty quantification reducing SLA violations by 40%, (3) SHAP-based interpretability revealing buffer state as the critical feature, and (4) rigorous evaluation under 5 shift scenarios and 4 stress tests. Results demonstrate that trustworthy AI techniques are essential for production RAN deployment, achieving 9% performance drop under shift vs 22% for naive baselines, with calibrated uncertainty (ECE=0.04).
 
-## 1. Introduction (1 page)
+## 1. Introduction
 
 ### 1.1 Motivation
 - Open RAN disaggregation enables intelligent network control
@@ -30,7 +30,7 @@ Open RAN orchestration requires ML models that are not only performant but also 
 - Section 6: Results & Discussion
 - Section 7: Conclusion
 
-## 2. Related Work (1.5 pages)
+## 2. Related Work
 
 ### 2.1 Open RAN and O-RAN Alliance
 - O-RAN architecture (RU, DU, CU, RIC)
@@ -64,7 +64,7 @@ Open RAN orchestration requires ML models that are not only performant but also 
 - RouteNet [cite: Ferriol et al. 2019]
 - Gap: Not applied to RAN resource allocation
 
-## 3. Problem Formulation (1 page)
+## 3. Problem Formulation
 
 ### 3.1 System Model
 - Multi-cell Open RAN architecture
@@ -90,7 +90,7 @@ Open RAN orchestration requires ML models that are not only performant but also 
 - **Interpretability**: Top-3 features explain 70% of variance
 - **Reproducibility**: Deterministic training, version control
 
-## 4. Methodology (2 pages)
+## 4. Methodology
 
 ### 4.1 Environment Simulator
 - NS-3 based implementation
@@ -145,7 +145,7 @@ V(s) = MLP(h_graph)
 - Integrated Gradients: Action attribution
 - Attention visualization: Cell influence
 
-## 5. Experiments (1.5 pages)
+## 5. Experiments 
 
 ### 5.1 Setup
 **Hardware**: NVIDIA RTX 4090 (24GB)
@@ -174,7 +174,7 @@ V(s) = MLP(h_graph)
 3. PPO-GNN (single model)
 4. PPO-GNN Ensemble (ours)
 
-## 6. Results & Discussion (1.5 pages)
+## 6. Results & Discussion 
 
 ### 6.1 In-Distribution Performance
 
@@ -277,12 +277,5 @@ This work demonstrates that trustworthy AI techniques are essential for producti
 - Veličković et al. (2018). Graph Attention Networks
 - Rusek et al. (2020). RouteNet: Leveraging Graph Neural Networks for Network Modeling
 
----
 
-**Total Pages**: 6-8 (conference format, 2-column)
 
-**Supplementary Material**:
-- Full hyperparameters
-- Additional ablation studies
-- Extended robustness results
-- Code repository link
