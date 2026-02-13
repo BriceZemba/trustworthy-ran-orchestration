@@ -4,11 +4,11 @@
 [![PyTorch 2.0+](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Research Project: Robust and Interpretable Deep Reinforcement Learning for Dynamic Resource Allocation in Open RAN Under Distribution Shift**
+**Project: Robust and Interpretable Deep Reinforcement Learning for Dynamic Resource Allocation in Open RAN Under Distribution Shift**
 
 This repository contains a publication-grade implementation of trustworthy AI models for Open RAN orchestration, emphasizing robustness, uncertainty quantification, and interpretability.
 
-## 🎯 Project Overview
+## Project Overview
 
 Open RAN systems require intelligent orchestration for dynamic resource allocation. This project demonstrates how to build ML models that are:
 - **Robust** to distribution shifts (traffic patterns, base station failures)
@@ -16,7 +16,7 @@ Open RAN systems require intelligent orchestration for dynamic resource allocati
 - **Interpretable** via SHAP and attention visualization
 - **Reproducible** with deterministic training and comprehensive logging
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -46,7 +46,7 @@ Open RAN systems require intelligent orchestration for dynamic resource allocati
                     └──────────────────┘
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -109,7 +109,7 @@ python experiments/interpretability_study.py --checkpoint results/checkpoints/be
 jupyter notebook notebooks/04_demo_inference.ipynb
 ```
 
-## 📊 Results Summary
+## Results Summary
 
 | Model | Throughput (Mbps) | SLA Viol. (%) | Perf. Drop (Shift) | ECE | Inference (ms) |
 |-------|-------------------|---------------|---------------------|-----|----------------|
@@ -123,7 +123,7 @@ jupyter notebook notebooks/04_demo_inference.ipynb
 - Ensemble uncertainty prevents 40% of SLA violations
 - Buffer state is the most predictive feature (35% SHAP importance)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 trustworthy-ran-orchestration/
@@ -147,7 +147,7 @@ trustworthy-ran-orchestration/
 └── docs/                      # Documentation
 ```
 
-## 🔬 Research Questions
+## Research Questions
 
 **RQ1:** How can we design DRL-based resource allocation policies that maintain performance under distribution shift?
 
@@ -157,7 +157,7 @@ trustworthy-ran-orchestration/
 
 **RQ4:** What are the trade-offs between model complexity, robustness, and interpretability?
 
-## 📖 Citation
+## Citation
 
 If you use this code in your research, please cite:
 
@@ -170,15 +170,14 @@ If you use this code in your research, please cite:
 }
 ```
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📧 Contact
 
 For questions or collaborations, please contact: your.email@university.edu
 
