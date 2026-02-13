@@ -1,0 +1,41 @@
+# Base configuration for all experiments
+# Reproducibility
+seed: 42
+deterministic: true
+cuda_deterministic: true
+
+# Logging
+log_dir: "results/logs"
+checkpoint_dir: "results/checkpoints"
+wandb_project: "trustworthy-ran"
+wandb_entity: null
+log_interval: 1000
+save_interval: 10000
+
+# Environment
+env:
+  name: "RANEnv-v0"
+  n_cells: 10
+  n_ues_per_cell: 15
+  n_prbs_per_cell: 100
+  timestep_ms: 10
+  episode_length: 1000
+  
+  # Rewards
+  reward:
+    alpha_throughput: 1.0
+    beta_sla_violation: 10.0
+    gamma_energy: 0.1
+    delta_fairness: 1.0
+  
+  # Constraints
+  constraints:
+    min_throughput_mbps: 5.0
+    max_latency_ms: 10.0
+    min_jain_index: 0.85
+
+# Evaluation
+evaluation:
+  n_eval_episodes: 100
+  eval_interval: 5000
+  deterministic: true

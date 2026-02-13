@@ -1,0 +1,15 @@
+# Robustness evaluation configuration
+tests:
+  - name: "flash_crowd"
+    magnitude: 10
+    duration: 300
+    acceptance_criteria:
+      sla_violation_rate: 0.05
+      latency_p95: 15
+  
+  - name: "base_station_failure"
+    n_failures: 3
+    recovery_time: 600
+    acceptance_criteria:
+      throughput_drop: 0.30
+      failover_time: 10

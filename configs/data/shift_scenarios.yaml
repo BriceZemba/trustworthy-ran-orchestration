@@ -1,0 +1,21 @@
+# Distribution shift scenarios
+scenarios:
+  temporal:
+    description: "Morning to evening traffic shift"
+    shifts:
+      - pattern: "commute"
+        time_offset: 8h
+  
+  spatial:
+    description: "Urban to suburban transition"
+    cell_density: 0.5
+    
+  failure:
+    description: "Base station outages"
+    failure_rate: 0.2
+    recovery_time: 600s
+  
+  adversarial:
+    description: "Coordinated traffic spike"
+    attack_intensity: 10x
+    affected_cells: 0.3

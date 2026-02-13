@@ -1,0 +1,17 @@
+# Traffic pattern configurations
+patterns:
+  - name: "commute"
+    type: "sinusoidal"
+    base_rate: 50
+    peak_factor: 3.0
+    peak_hours: [8, 18]
+  
+  - name: "uniform"
+    type: "constant"
+    rate: 80
+  
+  - name: "event"
+    type: "flash_crowd"
+    base_rate: 30
+    spike_factor: 5.0
+    duration_minutes: 60

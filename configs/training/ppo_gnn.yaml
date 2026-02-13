@@ -1,0 +1,66 @@
+# GNN-PPO Training Configuration
+defaults:
+  - /base_config
+
+# Model
+model:
+  type: "ppo_gnn"
+  encoder:
+    type: "gnn"
+    node_features: 16
+    edge_features: 8
+    hidden_dim: 64
+    n_layers: 2
+    heads: 4
+    dropout: 0.1
+  
+  policy:
+    hidden_dims: [256, 256]
+    activation: "relu"
+    use_orthogonal_init: true
+  
+  value:
+    hidden_dims: [256, 256]
+    activation: "relu"
+
+# Training
+training:
+  algorithm: "ppo"
+  total_timesteps: 5000000
+  n_steps: 2048
+  batch_size: 64
+  n_epochs: 10
+  
+  # PPO specific
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  clip_range_vf: null
+  ent_coef: 0.01
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  
+  # Optimizer
+  learning_rate: 0.0003
+  optimizer: "adam"
+  lr_schedule: "linear"
+  
+  # Curriculum learning
+  curriculum:
+    enabled: true
+    stages:
+      - name: "easy"
+        timesteps: 1000000
+        difficulty: 0.3
+      - name: "medium"
+        timesteps: 2000000
+        difficulty: 0.6
+      - name: "hard"
+        timesteps: 2000000
+        difficulty: 1.0
+
+# Environment for training
+env:
+  traffic_pattern: "commute"
+  shift_scenario: null
+  noise_level: 0.0
